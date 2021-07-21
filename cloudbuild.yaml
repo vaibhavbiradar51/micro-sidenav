@@ -5,6 +5,6 @@ steps:
   args: ['push', 'gcr.io/workflow-poc-315012/micro-nav:$SHORT_SHA']
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: gcloud
-  args: ['run','ENABLE_CORS=true', 'deploy', 'micro-nav', '--image', 'gcr.io/workflow-poc-315012/micro-nav:$SHORT_SHA', '--region', 'us-central1', '--platform', 'managed']
+  args: ['run','deploy','micro-nav', '--image', 'gcr.io/workflow-poc-315012/micro-nav:$SHORT_SHA', '--region', 'us-central1', '--platform', 'managed']
 images:
 - gcr.io/workflow-poc-315012/micro-nav:$SHORT_SHA
