@@ -1,6 +1,6 @@
 FROM node:carbon-alpine as builder
 RUN npm install -g http-server
-WORKDIR /app/sidenav
+WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
