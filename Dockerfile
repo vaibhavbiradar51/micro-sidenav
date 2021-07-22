@@ -1,4 +1,4 @@
-FROM node:lts-alpine
+FROM node:carbon-alpine as builder
 RUN npm install -g http-server
 WORKDIR /app/sidenav
 COPY package*.json ./
